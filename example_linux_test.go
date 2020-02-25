@@ -48,7 +48,7 @@ func Example() {
 	}
 
 	// Load it. This will set no_new_privs before loading.
-	if err := seccomp.LoadFilter(filter); err != nil {
+	if _, _, err := seccomp.LoadFilter(filter); err != nil {
 		fmt.Println("failed to load filter: ", err)
 		return
 	}

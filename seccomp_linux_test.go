@@ -99,7 +99,7 @@ func TestLoadFilter(t *testing.T) {
 		Policy:     policy,
 	}
 
-	err := LoadFilter(filter)
+	_, _, err := LoadFilter(filter)
 	if err != nil {
 		t.Fatal(err)
 	}
