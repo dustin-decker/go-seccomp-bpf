@@ -38,8 +38,9 @@ const (
 type FilterFlag uint32
 
 var filterFlagNames = map[FilterFlag]string{
-	FilterFlagTSync: "tsync",
-	FilterFlagLog:   "log",
+	FilterFlagTSync:       "tsync",
+	FilterFlagLog:         "log",
+	FilterFlagNewListener: "notify",
 }
 
 // String returns a string representation of the FilterFlag.
@@ -77,6 +78,7 @@ var actionNames = map[Action]string{
 	ActionTrace:       "trace",
 	ActionLog:         "log",
 	ActionAllow:       "allow",
+	ActionNotify:      "notify",
 }
 
 // Unpack sets the Action value based on the string.

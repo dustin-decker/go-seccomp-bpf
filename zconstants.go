@@ -23,7 +23,7 @@ package seccomp
 const prSetNoNewPrivs = 0x26
 
 const (
-	seccompSetModeStrict = 0
+	seccompSetModeStrict = 0x0
 
 	seccompSetModeFilter = 0x1
 )
@@ -38,6 +38,7 @@ const (
 	ActionTrace       Action = 0x7ff00000
 	ActionLog         Action = 0x7ffc0000
 	ActionAllow       Action = 0x7fff0000
+	ActionNotify      Action = 0x7fc00000
 )
 
 const (
@@ -49,4 +50,6 @@ const (
 	FilterFlagTSync FilterFlag = 0x1
 
 	FilterFlagLog FilterFlag = 0x2
+
+	FilterFlagNewListener   FilterFlag      = 0x8
 )

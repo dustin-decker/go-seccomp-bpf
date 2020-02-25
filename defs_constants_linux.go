@@ -60,6 +60,7 @@ const (
 	ActionTrace       Action = C.SECCOMP_RET_TRACE        // Pass to a tracer or disallow.
 	ActionLog         Action = C.SECCOMP_RET_LOG          // Allow after logging.
 	ActionAllow       Action = C.SECCOMP_RET_ALLOW        // Allow.
+	ActionNotify Action = C.SECCOMP_RET_USER_NOTIF
 )
 
 const (
@@ -77,4 +78,6 @@ const (
 	// All filter return actions except SECCOMP_RET_ALLOW should be logged.
 	// Since Linux 4.14.
 	FilterFlagLog FilterFlag = C.SECCOMP_FILTER_FLAG_LOG
+
+	FilterFlagNewListener FilterFlag = C.SECCOMP_FILTER_FLAG_NEW_LISTENER
 )
